@@ -1,0 +1,346 @@
+/* ==========================================================================
+   Fat Tail Games — shared styles
+   Single stylesheet for every page. Page-specific rules are grouped and
+   labelled below rather than split into separate files; the whole site is
+   small enough that one cached request beats several.
+   ========================================================================== */
+
+/* ---------- Design tokens ---------- */
+:root {
+  --bg: #0e1013;
+  --bg-raised: #14171b;
+  --text: #ece7dd;
+  --text-dim: #9a978f;
+  --accent: #e2a23b;
+  --accent-dim: #7a5a26;
+  --line: #262a30;
+  --teal: #3d6b66;
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --measure: 62ch;
+  color-scheme: dark;
+}
+
+/* ---------- Reset & base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible,
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+img, svg { max-width: 100%; }
+
+/* ---------- Layout ---------- */
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- Typography ---------- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+h2 { font-size: clamp(26px, 3.4vw, 34px); margin-bottom: 22px; }
+
+/* A mono line prefixed with an accent dot — hero note, "last updated", etc. */
+.meta-line {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.meta-line .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ---------- Hero (home) ---------- */
+.hero {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.curve-field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+}
+
+.curve { fill: none; }
+.curve-primary { stroke: var(--accent); stroke-width: 2; opacity: 0.5; }
+.curve-secondary { stroke: var(--teal); stroke-width: 1.5; opacity: 0.35; }
+
+.hero-content { position: relative; z-index: 2; }
+
+.hero .eyebrow { margin-bottom: 22px; }
+
+h1.wordmark {
+  font-size: clamp(48px, 9vw, 92px);
+  line-height: 0.98;
+  max-width: 11ch;
+}
+
+.tagline {
+  margin-top: 22px;
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--text-dim);
+  max-width: 42ch;
+}
+
+.hero-note { margin-top: 46px; }
+
+/* ---------- Content blocks (home) ---------- */
+section.block {
+  padding: 88px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+section.block:last-of-type { border-bottom: none; }
+
+.block .eyebrow { margin-bottom: 18px; }
+
+.block p {
+  font-size: 16.5px;
+  color: var(--text-dim);
+  max-width: var(--measure);
+}
+
+.block p + p { margin-top: 16px; }
+
+.fact-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+
+.fact { font-size: 14.5px; }
+
+.fact .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.fact .value { color: var(--text); }
+
+/* ---------- Contact (home) ---------- */
+.contact-line {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.contact-email {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 500;
+}
+
+/* ---------- Masthead (subpages) ---------- */
+.masthead {
+  padding: 34px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.back-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.back-link:hover { color: var(--accent); text-decoration: none; }
+.back-link .arrow { color: var(--accent); }
+
+/* ---------- Page head (subpages) ---------- */
+.page-head {
+  padding: 72px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-head .eyebrow { margin-bottom: 20px; }
+
+.page-head h1 {
+  font-size: clamp(34px, 6vw, 54px);
+  line-height: 1.04;
+}
+
+.page-head .updated { margin-top: 22px; }
+
+.lede {
+  margin-top: 30px;
+  font-size: clamp(16px, 2vw, 18px);
+  color: var(--text-dim);
+  max-width: 52ch;
+}
+
+/* ---------- Long-form prose (privacy, and future policy pages) ---------- */
+.prose { padding: 64px 0 80px; }
+
+.prose section + section {
+  margin-top: 52px;
+  padding-top: 52px;
+  border-top: 1px solid var(--line);
+}
+
+.prose h2 { font-size: clamp(22px, 3vw, 28px); margin-bottom: 20px; }
+
+.prose p,
+.prose li {
+  font-size: 16.5px;
+  color: var(--text-dim);
+  max-width: var(--measure);
+}
+
+.prose p + p { margin-top: 16px; }
+
+.prose ul {
+  list-style: none;
+  margin-top: 16px;
+  max-width: var(--measure);
+}
+
+.prose li {
+  position: relative;
+  padding-left: 22px;
+  margin-top: 10px;
+}
+
+/* Accent dash in place of a bullet disc. */
+.prose li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 6px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.prose strong { color: var(--text); font-weight: 500; }
+.prose p + ul { margin-top: 14px; }
+.prose ul + p { margin-top: 20px; }
+
+/* ---------- Centred message (404) ---------- */
+.center-page {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center-page .eyebrow { margin-bottom: 20px; }
+.center-page h1 { font-size: clamp(34px, 6vw, 54px); line-height: 1.04; }
+
+.center-page p {
+  margin-top: 22px;
+  font-size: 16.5px;
+  color: var(--text-dim);
+  max-width: 46ch;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 36px 0 48px;
+  border-top: 1px solid var(--line);
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+footer p,
+footer a {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+}
+
+footer a:hover { color: var(--accent); }
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-meta .sep { color: var(--line); }
+
+/* The home page's last block already draws its own rule. */
+.home footer { border-top: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  .hero { min-height: 82vh; }
+  section.block { padding: 64px 0; }
+  .page-head { padding: 52px 0 34px; }
+  .prose { padding: 48px 0 64px; }
+  .prose section + section { margin-top: 40px; padding-top: 40px; }
+  footer .wrap { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -5,218 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fat Tail Games — Independent Video Game Development Studio</title>
 <meta name="description" content="Fat Tail Games, LLC is an independent video game development studio based in Irvine, California, designing original video game experiences.">
+<link rel="canonical" href="https://fattailgames.com/">
+<meta name="theme-color" content="#0e1013">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fat Tail Games">
+<meta property="og:title" content="Fat Tail Games — Independent Video Game Development Studio">
+<meta property="og:description" content="An independent video game development studio in Irvine, California, building original experiences worth the long odds.">
+<meta property="og:url" content="https://fattailgames.com/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0e1013;
-    --bg-raised: #14171b;
-    --text: #ece7dd;
-    --text-dim: #9a978f;
-    --accent: #e2a23b;
-    --accent-dim: #7a5a26;
-    --line: #262a30;
-    --teal: #3d6b66;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'IBM Plex Sans', sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-
-  .wrap {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 0 28px;
-  }
-
-  .eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
-
-  /* ---------- Hero ---------- */
-  .hero {
-    min-height: 92vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .curve-field {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.55;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero .eyebrow { margin-bottom: 22px; }
-
-  h1.wordmark {
-    font-family: 'Fraunces', serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: clamp(48px, 9vw, 92px);
-    line-height: 0.98;
-    letter-spacing: -0.01em;
-    max-width: 11ch;
-  }
-
-  .tagline {
-    margin-top: 22px;
-    font-size: clamp(16px, 2vw, 19px);
-    color: var(--text-dim);
-    max-width: 42ch;
-  }
-
-  .hero-note {
-    margin-top: 46px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12.5px;
-    color: var(--text-dim);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .hero-note .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    flex-shrink: 0;
-  }
-
-  /* ---------- Sections ---------- */
-  section.block {
-    padding: 88px 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  section.block:last-of-type { border-bottom: none; }
-
-  .block .eyebrow { margin-bottom: 18px; }
-
-  h2 {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    font-size: clamp(26px, 3.4vw, 34px);
-    letter-spacing: -0.01em;
-    margin-bottom: 22px;
-  }
-
-  .block p {
-    font-size: 16.5px;
-    color: var(--text-dim);
-    max-width: 62ch;
-  }
-
-  .block p + p { margin-top: 16px; }
-
-  .fact-row {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 34px;
-  }
-
-  .fact {
-    font-size: 14.5px;
-  }
-
-  .fact .label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  .fact .value { color: var(--text); }
-
-  /* ---------- Contact ---------- */
-  .contact-line {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    margin-top: 26px;
-    flex-wrap: wrap;
-  }
-
-  .contact-email {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(20px, 3vw, 26px);
-    font-weight: 500;
-  }
-
-  /* ---------- Footer ---------- */
-  footer {
-    padding: 36px 0 48px;
-  }
-
-  footer .wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  footer p, footer a {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11.5px;
-    color: var(--text-dim);
-    letter-spacing: 0.02em;
-  }
-
-  .footer-meta {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-
-  .footer-meta .sep { color: var(--line); }
-
-  footer a:hover { color: var(--accent); }
-
-  @media (max-width: 560px) {
-    .hero { min-height: 82vh; }
-    section.block { padding: 64px 0; }
-    footer .wrap { flex-direction: column; align-items: flex-start; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
-</style>
+<link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body class="home">
 
 <header class="hero">
   <svg class="curve-field" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -228,7 +34,7 @@
              C 655 90, 690 200, 730 330
              C 770 450, 830 540, 950 580
              C 1050 610, 1150 618, 1260 620"
-          fill="none" stroke="#e2a23b" stroke-width="2" opacity="0.5"/>
+          class="curve curve-primary"/>
     <path d="M -50 660
              C 200 660, 320 655, 420 630
              C 500 608, 540 540, 590 400
@@ -236,66 +42,68 @@
              C 680 260, 705 330, 740 430
              C 790 570, 870 630, 1000 650
              C 1080 662, 1180 665, 1260 664"
-          fill="none" stroke="#3d6b66" stroke-width="1.5" opacity="0.35"/>
+          class="curve curve-secondary"/>
   </svg>
 
   <div class="wrap hero-content">
     <p class="eyebrow">Fat Tail Games, LLC — Irvine, California</p>
     <h1 class="wordmark">Fat Tail<br>Games</h1>
     <p class="tagline">An independent video game development studio, building original experiences worth the long odds.</p>
-    <p class="hero-note"><span class="dot"></span>Founded 2026 — currently in early development</p>
+    <p class="meta-line hero-note"><span class="dot"></span>Founded 2026 — currently in early development</p>
   </div>
 </header>
 
-<section class="block" id="about">
-  <div class="wrap">
-    <p class="eyebrow">About</p>
-    <h2>Small studio, deliberate craft</h2>
-    <p>Fat Tail Games, LLC is an independent video game development studio based in Irvine, California. Founded in 2026, we design and build original video game experiences for players, with a focus on craftsmanship and thoughtful design over volume.</p>
-    <p>As a small, founder-led studio, every decision — mechanical, visual, narrative — passes through the same hands. That's a constraint we've chosen on purpose.</p>
-  </div>
-</section>
+<main>
+  <section class="block" id="about">
+    <div class="wrap">
+      <p class="eyebrow">About</p>
+      <h2>Small studio, deliberate craft</h2>
+      <p>Fat Tail Games, LLC is an independent video game development studio based in Irvine, California. Founded in 2026, we design and build original video game experiences for players, with a focus on craftsmanship and thoughtful design over volume.</p>
+      <p>As a small, founder-led studio, every decision — mechanical, visual, narrative — passes through the same hands. That's a constraint we've chosen on purpose.</p>
+    </div>
+  </section>
 
-<section class="block" id="focus">
-  <div class="wrap">
-    <p class="eyebrow">Focus</p>
-    <h2>What we're building</h2>
-    <p>We specialize in video game design, development, and publishing across digital platforms. Our current work is in early development, with more details to be announced as our first project progresses.</p>
-  </div>
-</section>
+  <section class="block" id="focus">
+    <div class="wrap">
+      <p class="eyebrow">Focus</p>
+      <h2>What we're building</h2>
+      <p>We specialize in video game design, development, and publishing across digital platforms. Our current work is in early development, with more details to be announced as our first project progresses.</p>
+    </div>
+  </section>
 
-<section class="block" id="company">
-  <div class="wrap">
-    <p class="eyebrow">Company</p>
-    <h2>Registered &amp; based in California</h2>
-    <p>Fat Tail Games, LLC is a California limited liability company.</p>
-    <div class="fact-row">
-      <div class="fact">
-        <span class="label">Entity No.</span>
-        <span class="value">B20260368802</span>
-      </div>
-      <div class="fact">
-        <span class="label">Formed</span>
-        <span class="value">August 13, 2026</span>
-      </div>
-      <div class="fact">
-        <span class="label">Location</span>
-        <span class="value">Irvine, California</span>
+  <section class="block" id="company">
+    <div class="wrap">
+      <p class="eyebrow">Company</p>
+      <h2>Registered &amp; based in California</h2>
+      <p>Fat Tail Games, LLC is a California limited liability company.</p>
+      <div class="fact-row">
+        <div class="fact">
+          <span class="label">Entity No.</span>
+          <span class="value">B20260368802</span>
+        </div>
+        <div class="fact">
+          <span class="label">Formed</span>
+          <span class="value">August 13, 2026</span>
+        </div>
+        <div class="fact">
+          <span class="label">Location</span>
+          <span class="value">Irvine, California</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="block" id="contact">
-  <div class="wrap">
-    <p class="eyebrow">Contact</p>
-    <h2>Get in touch</h2>
-    <p>For business inquiries, reach out directly.</p>
-    <div class="contact-line">
-      <a class="contact-email" href="mailto:akim@fattailgames.com">akim@fattailgames.com</a>
+  <section class="block" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Get in touch</h2>
+      <p>For business inquiries, reach out directly.</p>
+      <div class="contact-line">
+        <a class="contact-email" href="mailto:akim@fattailgames.com">akim@fattailgames.com</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer>
   <div class="wrap">
@@ -303,6 +111,25 @@
     <p class="footer-meta">Irvine, California <span class="sep">/</span> <a href="/privacy">Privacy Policy</a></p>
   </div>
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Fat Tail Games, LLC",
+  "alternateName": "Fat Tail Games",
+  "url": "https://fattailgames.com/",
+  "email": "akim@fattailgames.com",
+  "foundingDate": "2026-08-13",
+  "description": "An independent video game development studio based in Irvine, California, designing original video game experiences.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Irvine",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  }
+}
+</script>
 
 </body>
 </html>
