@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — SLIP — Fat Tail Games</title>
+<meta name="description" content="Privacy policy for SLIP, a puzzle game published by Fat Tail Games, LLC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1013;
+    --bg-raised: #14171b;
+    --text: #ece7dd;
+    --text-dim: #9a978f;
+    --accent: #e2a23b;
+    --accent-dim: #7a5a26;
+    --line: #262a30;
+    --teal: #3d6b66;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead {
+    padding: 34px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .back-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+  .back-link .arrow { color: var(--accent); }
+
+  /* ---------- Page head ---------- */
+  .page-head {
+    padding: 72px 0 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .page-head .eyebrow { margin-bottom: 20px; }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(34px, 6vw, 54px);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+  }
+
+  .updated {
+    margin-top: 22px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .updated .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .lede {
+    margin-top: 30px;
+    font-size: clamp(16px, 2vw, 18px);
+    color: var(--text-dim);
+    max-width: 52ch;
+  }
+
+  /* ---------- Policy body ---------- */
+  .policy {
+    padding: 64px 0 80px;
+  }
+
+  .policy section + section {
+    margin-top: 52px;
+    padding-top: 52px;
+    border-top: 1px solid var(--line);
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(22px, 3vw, 28px);
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+
+  .policy p, .policy li {
+    font-size: 16.5px;
+    color: var(--text-dim);
+    max-width: 62ch;
+  }
+
+  .policy p + p { margin-top: 16px; }
+
+  .policy ul {
+    list-style: none;
+    margin-top: 16px;
+    max-width: 62ch;
+  }
+
+  .policy li {
+    position: relative;
+    padding-left: 22px;
+    margin-top: 10px;
+  }
+
+  .policy li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.68em;
+    width: 6px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .policy strong { color: var(--text); font-weight: 500; }
+
+  .policy p + ul { margin-top: 14px; }
+  .policy ul + p { margin-top: 20px; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 36px 0 48px;
+    border-top: 1px solid var(--line);
+  }
+
+  footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer p, footer a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--text-dim);
+    letter-spacing: 0.02em;
+  }
+
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 560px) {
+    .page-head { padding: 52px 0 34px; }
+    .policy { padding: 48px 0 64px; }
+    .policy section + section { margin-top: 40px; padding-top: 40px; }
+    footer .wrap { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="masthead">
+  <div class="wrap">
+    <a class="back-link" href="/"><span class="arrow">&larr;</span> Fat Tail Games</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">SLIP</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated"><span class="dot"></span>Last updated 2 September 2026</p>
+    <p class="lede">SLIP is a puzzle game published by Fat Tail Games. This policy explains what the game collects, why, and how to get rid of it. It is short because the game collects very little.</p>
+  </div>
+</header>
+
+<main class="policy">
+  <div class="wrap">
+
+    <section>
+      <h2>Playing without an account</h2>
+      <p>You can play without signing in or giving us anything about yourself. When you first launch the game it generates a random identifier for your device. That identifier is not derived from your device, your Apple ID, or anything else about you — it is random, it means nothing outside this game, and it cannot be linked back to you.</p>
+      <p>Alongside it we store your progress on our servers so it is not lost:</p>
+      <ul>
+        <li>which levels you have unlocked, and the star rating for each</li>
+        <li>the power-ups you hold</li>
+        <li>whether the sound is muted</li>
+        <li>whether you have purchased the ad-free upgrade</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Signing in</h2>
+      <p>Signing in with Apple or Google is optional. It exists so your progress survives a lost phone and can move to another device. If you do sign in, we receive and store:</p>
+      <ul>
+        <li>an account identifier from Apple or Google — a meaningless string that identifies you only to us</li>
+        <li>your email address, which we store solely to show you which account you are signed in to</li>
+      </ul>
+      <p>If you use Sign in with Apple and choose to hide your address, we only ever see Apple's private relay address. We never send you email, and we never share, sell, or use your address to look anything up.</p>
+    </section>
+
+    <section>
+      <h2>Purchases</h2>
+      <p>If you buy the ad-free upgrade, Apple processes the payment — we never see your payment details. Apple gives the game a receipt, which we send to our server to confirm the purchase is genuine, and we store the transaction identifier so the purchase can be restored later.</p>
+    </section>
+
+    <section>
+      <h2>Advertising</h2>
+      <p>Unless you have purchased the ad-free upgrade, the game shows occasional full-screen ads from Google AdMob. We request <strong>non-personalised ads only</strong>: the game does not ask for tracking permission, does not track you across other apps or websites, and does not share anything about you with advertisers. AdMob still receives technical information needed to serve an ad, such as your approximate region and device type — see <a href="https://policies.google.com/technologies/partner-sites">Google's policy</a> for what it does with that.</p>
+    </section>
+
+    <section>
+      <h2>What we do not collect</h2>
+      <ul>
+        <li>your name, contacts, photos, or location</li>
+        <li>any advertising or device identifier used for tracking</li>
+        <li>analytics about how you use the game</li>
+        <li>anything at all, if you never sign in and never purchase, beyond the random identifier and your progress</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Who else sees it</h2>
+      <p>Our servers run on Google Firebase, which stores the data described above on our behalf. Apple and Google handle sign-in and purchases as described above. Nobody else receives your data. We do not sell it, and there is nothing here to sell.</p>
+    </section>
+
+    <section>
+      <h2>Deleting your data</h2>
+      <p>If you have signed in, you can delete your account from inside the game: Account → Delete Account. That permanently removes your progress and your email address from our servers, on every device, and cannot be undone. We keep a record that the identifier was used, and nothing else, so it is never handed to someone new; that record contains no information about you and is removed after 180 days.</p>
+      <p>If you have not signed in, deleting the app removes the only link between you and your progress. You can also clear progress at any time from Account → Reset Progress.</p>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>SLIP is not directed to children under 13, and we do not knowingly collect information from them. If you believe a child has provided us with information, contact us and we will delete it.</p>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <p>If this policy changes we will update this page and the date at the top. Material changes will be announced in the game.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions, or a request to delete your data: <a href="mailto:akim@fattailgames.com">akim@fattailgames.com</a></p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Fat Tail Games, LLC. All rights reserved.</p>
+    <p>Irvine, California</p>
+  </div>
+</footer>
+
+</body>
+</html>

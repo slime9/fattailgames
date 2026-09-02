@@ -188,12 +188,22 @@
     gap: 12px;
   }
 
-  footer p {
+  footer p, footer a {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11.5px;
     color: var(--text-dim);
     letter-spacing: 0.02em;
   }
+
+  .footer-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .footer-meta .sep { color: var(--line); }
+
+  footer a:hover { color: var(--accent); }
 
   @media (max-width: 560px) {
     .hero { min-height: 82vh; }
@@ -290,7 +300,7 @@
 <footer>
   <div class="wrap">
     <p>© 2026 Fat Tail Games, LLC. All rights reserved.</p>
-    <p>Irvine, California</p>
+    <p class="footer-meta">Irvine, California <span class="sep">/</span> <a href="/privacy">Privacy Policy</a></p>
   </div>
 </footer>
 
