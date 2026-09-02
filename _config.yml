@@ -1,0 +1,7 @@
+# GitHub Pages (Jekyll) build config.
+#
+# Everything in this repo is published at fattailgames.com, so anything not
+# meant for visitors has to be excluded here explicitly.
+exclude:
+  - CLAUDE.md
+  - README.md
