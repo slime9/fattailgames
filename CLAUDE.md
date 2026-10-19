@@ -18,13 +18,14 @@ will 404 under `file://`.
 
 ```
 index.html         home page
-privacy/           SLIP privacy policy  ->  /privacy
+privacy/           Pip's Big Slide privacy policy  ->  /privacy
 404.html           GitHub Pages serves this for unknown paths
 styles.css         all styles for every page
 favicon.svg        SVG favicon (no .ico or PNG fallback)
 robots.txt         allows everything, points at the sitemap
 sitemap.xml        list URLs here manually when adding a page
 CNAME              fattailgames.com
+app-ads.txt        AdMob authorized-seller line; not a page, not in the sitemap
 ```
 
 **New pages go in `<name>/index.html`, not `<name>.html`** — that is what gives
@@ -67,6 +68,6 @@ There is no `og:image` yet — the cards render as `summary`, not
 
 ## Related, but not in this repo
 
-`api.fattailgames.com` is a separate service. It also serves a copy of the SLIP
+`api.fattailgames.com` is a separate service. It also serves a copy of the game's
 privacy policy, which is where `/privacy` here was adapted from — the two can
 drift, so update both when the policy changes.
