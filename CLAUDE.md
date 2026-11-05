@@ -68,6 +68,6 @@ There is no `og:image` yet — the cards render as `summary`, not
 
 ## Related, but not in this repo
 
-`api.fattailgames.com` is a separate service. It also serves a copy of the game's
-privacy policy, which is where `/privacy` here was adapted from — the two can
-drift, so update both when the policy changes.
+`api.fattailgames.com` is a separate service. It does not keep its own copy of
+the privacy policy; it points to `fattailgames.com/privacy`, so this repo is the
+only place the policy needs updating.
